@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background:black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-size: 3em;
+    padding: 20px 40px 50px 40px;
+    text-align: center;
+}
+
+.countdown-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px rgba(255, 255, 255, 0.63);
+    padding: 30px 67px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ul li span {
+    font-size: 4em;
+}
+
+.date-conatiner{
+    text-align: center;
+    font-size: 1em;
+    padding: 50px;
+    line-height: 1.5em;
+}
+.date-conatiner p span{
+    font-size:0.8em
+}
+
+.date-conatiner p:nth-child(1){
+    font-size: 2em;
+    padding-bottom: 15px ;
+}
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: solid 1px rgba(255, 255, 255, 0.63);
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@media (max-width: 767px){
+    .glow-on-hover {
+        width: 420px;
+        height: 120px;
+        font-size: 1.4em;
+        padding: 20px 0 20px 0;
+    }
+    .main-container{
+        padding-top: 700px;
+        font-size: 2em;
+    }
+    .countdown-container{
+        padding: 30px 37px;
+    }
+
+    ul li span {
+        font-size: 3em;
+    }
+    .date-conatiner p:nth-child(1){
+        font-size: 1.3em;
+        padding-bottom: 15px ;
+    }
+}
