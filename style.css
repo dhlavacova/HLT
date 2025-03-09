@@ -8,7 +8,7 @@ html, body {
     height: 100%;
 }
 body{
-    background-image: url("../image/erde.jpg");
+    background-image: url("erde.jpg");
     /*background:black;*/
     background-position: center;
     background-size: cover;
