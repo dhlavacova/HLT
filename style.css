@@ -84,7 +84,7 @@ ul li span {
     padding-bottom: 15px ;
 }
 
-.btn {
+.btn{
     position: relative;
     padding: 1.5rem 3rem;
     font-size: 1.1rem;
@@ -96,6 +96,15 @@ ul li span {
     cursor: pointer;
     overflow: hidden;
     transition: all 0.4s ease;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+.btn a:visited{
+    color: white;
+    text-decoration: none;
 }
 
 .matrix {
