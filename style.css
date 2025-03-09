@@ -6,6 +6,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 body{
     background-image: url("erde.jpg");
@@ -16,7 +17,7 @@ body{
     width: 100%;
     height: 100vh;
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 2px black;
+    text-shadow: 0 0 3px black;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -68,20 +69,17 @@ ul li span {
     text-align: center;
 }
 
-ul li span:nth-child(even) {
-
-}
-.date-conatiner{
+.date-container{
     text-align: center;
     font-size: 1em;
     padding: 50px;
     line-height: 1.5em;
 }
-.date-conatiner p span{
+.date-container p:nth-child(2){
     font-size:0.8em
 }
 
-.date-conatiner p:nth-child(1){
+.date-container p:nth-child(1){
     font-size: 2em;
     padding-bottom: 15px ;
 }
@@ -138,36 +136,58 @@ ul li span:nth-child(even) {
 
     }
 }
-
-@media (max-width: 767px){
-    body{
-        min-height: 100vh;
-    }
-    h1{
-        padding-top: 500px;
-    }
-    .main-container{
-        padding-top: 100px;
-        font-size: 2em;
-    }
+@media (max-width: 991px){
     .countdown-container{
-        padding: 30px 37px;
+        padding: 20px 20px;
+    }
+}
+
+@media(max-width: 767px){
+
+    .countdown-container{
+        padding: 20px 20px;
     }
 
     ul li span {
-        font-size: 2.5em;
+        font-size: 1.5em;
         min-width: 1em;
     }
-    .date-conatiner p:nth-child(1){
+    .date-container p:nth-child(1){
         font-size: 1.3em;
         padding-bottom: 15px ;
     }
     .btn {
-        padding: 4rem 10rem;
+        padding: 2rem 3rem;
         font-size: 1.8rem;
         justify-content: center;
         align-items: center;
         display: flex;
     }
 
+}
+
+@media (max-width: 479px){
+    h1{
+        font-size: 2.5em;
+    }
+    .countdown-container{
+        padding: 10px 10px;
+
+    }
+    ul li span {
+        font-size: 2.3em;
+        min-width: 1.2em;
+
+    }
+    ul li {
+        font-size: 0.7em;
+        min-width: 1em;
+
+    }
+    .date-container p:nth-child(1){
+        font-size: 1.1em;
+    }
+    .date-container p:nth-child(2){
+        line-height: 1.5;
+    }
 }
